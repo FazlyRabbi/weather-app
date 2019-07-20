@@ -62,23 +62,23 @@ class Ui {
 
     setMassege(mag) {
 
-        const para = document.querySelector(".jumbotron p")
+        const para = document.querySelector("#massegeWrapper")
 
+        console.log(para)
         const div = document.createElement("div");
+              div.id = "message"
+
+   console.log(div)
+              div.className = "alert alert-danger d-flex";
+              div.textContent = mag;
 
         const icon = document.createElement("span");
         icon.id = "icon"
         icon.className = "ml-auto";
         icon.innerHTML = `<i class="far fa-times-circle" id="close"></i>`
 
-        div.id = "message"
-        div.className = "alert alert-danger d-flex";
+        para.appendChild(div);
 
-        div.textContent = mag;
-
-
-
-        para.insertAdjacentElement("afterend", div);
         div.appendChild(icon);
 
         icon.style.cursor = "pointer";
@@ -93,7 +93,16 @@ class Ui {
 
     static closeMassege() {
 
-        document.getElementById("message").remove();
+     document.querySelector("#massegeWrapper").addEventListener("click",function(e){
+
+        if(e.target.id = "icon" ){
+          
+            e.target.parentElement.parentElement.remove();
+          
+        }
+
+     })
+       
     }
 
 }
