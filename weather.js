@@ -47,10 +47,7 @@ function weatherData() {
     }).catch(err => {
 
         const ui = new Ui();
-
         ui.setMassege("your city is not found")
-
-
     })
 
 }

@@ -64,11 +64,11 @@ class Ui {
 
         const para = document.querySelector("#massegeWrapper")
 
-        console.log(para)
+       
         const div = document.createElement("div");
               div.id = "message"
 
-   console.log(div)
+  
               div.className = "alert alert-danger d-flex";
               div.textContent = mag;
 
