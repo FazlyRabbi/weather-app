@@ -45,7 +45,12 @@ function weatherData() {
         ui.print(data)
 
     }).catch(err => {
-        console.log(("your city not found"))
+
+        const ui = new Ui();
+
+        ui.setMassege("your city is not found")
+
+
     })
 
 }
